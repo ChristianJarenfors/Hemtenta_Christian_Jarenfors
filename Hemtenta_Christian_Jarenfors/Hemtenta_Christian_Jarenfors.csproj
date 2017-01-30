@@ -7,7 +7,7 @@
     <ProjectGuid>{5FAA72E9-3DE1-43B7-A19D-3D4A0663EEB4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hemtenta_Christian_Jarenfors</RootNamespace>
+    <RootNamespace>HemtentaTdd2017</RootNamespace>
     <AssemblyName>Hemtenta_Christian_Jarenfors</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAccount.cs" />
+    <Compile Include="IBlogg.cs" />
+    <Compile Include="IMusicPlayer.cs" />
+    <Compile Include="IWebshop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

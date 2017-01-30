@@ -4,9 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HemtentaTdd2017.webshop
+namespace HemtentaTdd2017.Webshop
 {
-    class MyWebshop
+    public class MyWebshop : IWebshop
     {
+        public IBasket Basket
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public void Checkout(IBilling billing)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

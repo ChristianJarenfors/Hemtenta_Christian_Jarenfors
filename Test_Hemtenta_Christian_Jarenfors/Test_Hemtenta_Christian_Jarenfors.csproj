@@ -71,13 +71,16 @@
     <Compile Include="UnitTestWebshop.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Hemtenta_Christian_Jarenfors\Hemtenta_Christian_Jarenfors.csproj">
       <Project>{5faa72e9-3de1-43b7-a19d-3d4a0663eeb4}</Project>
       <Name>Hemtenta_Christian_Jarenfors</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

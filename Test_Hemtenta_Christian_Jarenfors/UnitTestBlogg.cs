@@ -207,6 +207,7 @@ namespace Test_Hemtenta_Christian_Jarenfors
         {
             Assert.AreEqual(0, Bloggy.SendEmail(ValidAdress, ValidCaption, ValidBody));
         }
+        //Nedan kan vara överkurs men jag slängde in det bara utifall.
         [Test]
         [TestCase("No_Snabel_A")]
         [TestCase("Too_Many_@@")]

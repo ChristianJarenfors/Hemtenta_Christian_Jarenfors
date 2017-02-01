@@ -49,6 +49,7 @@
     <Compile Include="Cms.cs" />
     <Compile Include="Music.cs" />
     <Compile Include="music\MusicPlayer.cs" />
+    <Compile Include="music\Song.cs" />
     <Compile Include="Webshop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

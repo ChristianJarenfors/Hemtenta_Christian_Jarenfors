@@ -18,6 +18,11 @@ namespace Test_Hemtenta_Christian_Jarenfors
         [SetUp]
         public void init()
         {
+            //Här har jag gjort en mock för IMediaDatabase.
+            //Den funkar så långt jag kan testa den. Har svårt att kolla
+            //De exceptions som skall kastas när Connection strular eftersom
+            //Jag nånstans förutsätter att Man öppnar connection innan man hämtar
+            //låtar och sedan stänger efter att man har gjort det. :S
             nowPlaying = "Tystnad råder";
             MP = new MusicPlayer();
             Mock<IMediaDatabase> IMediaDatabaseMock = new Mock<IMediaDatabase>();

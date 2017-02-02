@@ -1,0 +1,29 @@
+﻿Förklara med egna ord vad "red, green, refactor" innebär och hur du använt det 
+i kursen?
+
+Svar: Red Green Refactor beskriver grundtanken för hur man skall jobba med tdd.
+Red betyder att man skriver test som failar. Green betyder att man sen skriver 
+minsta möjliga kod för att testen man skrivit ska lyckas. Det sista steget är att man
+ser över sin kod och kollar om man behöver skriva om något i antingen testen eller
+det man testar.
+
+Själv har jag i så gott som alla project vi haft utgått från att skriva testen först 
+och sedan skriva kod för att få dem godkända. I vissa fall har jag tagit metod för 
+metod. Tex i schackuppgiften testade jag en pjäs i taget. Annars blir det ofta att 
+jag först skriver ner rubrikerna på de tester jag kommer på och sedan skriver
+testkoden. Först därefter skriver jag den "riktiga" koden på det som testas.
+
+Undantaget är Webshop uppgiften på tentan där det var så mycket som var oklart.
+Då skrev jag först ihop det hela lite lätt. Sedan skrev jag alla testen och tänkte
+över det hela. Det kändes konstigt så om jag skall jobba med TDD i fortsättningen 
+ska jag nog se till att skriva testen först hädanefter.
+
+Till sist vad ska sägas om refactor? Ja, det kommer titt som tätt i de fall då
+testen gör nytta och de hittar fel i din kod som du kan åtgärda. Då kommer refactor
+in i bilden.
+
+TDD har varit intressant och även om det krävs mer kod i första skedet av skrivandet
+så känns det som om nyttan man får av det är värdefull. Bättre kod och mer kontroll.
+Sån är min uppfattning.
+
+/Christian Jarenfors

@@ -49,7 +49,8 @@ namespace Test_Hemtenta_Christian_Jarenfors
          * IBilling mock. Det är lite oklart men vad jag tycker så behöver 
          * Pay-metoden mockas något nämnvärt eftersom den inte returnerar nått.
          * Däremot behöver Balansen på kontot vara mer än det man skall betala
-         * så den behöver mockas.
+         * så den behöver mockas. Är det för lite så kastas exception innan man
+         * kommer till Pay().
          */
 
 
@@ -115,6 +116,7 @@ namespace Test_Hemtenta_Christian_Jarenfors
             Shoppy.Basket.RemoveProduct(Äpple1, 4);
             Assert.AreEqual(0, Shoppy.Basket.TotalCost);
         }
+        
         [Test]
         public void Add_Remove_Fail_Null_Product()
         {
@@ -126,6 +128,13 @@ namespace Test_Hemtenta_Christian_Jarenfors
         {
             Assert.Throws<Exception>(() => Shoppy.Basket.AddProduct(Äpple1, -1));
             Assert.Throws<Exception>(() => Shoppy.Basket.RemoveProduct(Päron10, -2));
+        }
+        [Test]
+        public void Add_Remove_Product_With_Negative_Price()
+        {
+            Product p = new Product() { Name = "Below Zero", Price = -1 };
+            Assert.Throws<Exception>(() => Shoppy.Basket.AddProduct(p, 2));
+            Assert.Throws<Exception>(() => Shoppy.Basket.RemoveProduct(p, 2));
         }
         #endregion 
 

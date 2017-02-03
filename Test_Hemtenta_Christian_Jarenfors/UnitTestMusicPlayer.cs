@@ -25,6 +25,8 @@ namespace Test_Hemtenta_Christian_Jarenfors
             //låtar och sedan stänger efter att man har gjort det. :S
             nowPlaying = "Tystnad råder";
             MP = new MusicPlayer();
+
+
             Mock<IMediaDatabase> IMediaDatabaseMock = new Mock<IMediaDatabase>();
             #region Setup IMediaDatabaseMock
             IMediaDatabaseMock.When(() => Connection).Setup((x) => x.OpenConnection()).Throws(new DatabaseAlreadyOpenException());
@@ -45,8 +47,9 @@ namespace Test_Hemtenta_Christian_Jarenfors
                      );
             IMediaDatabaseMock.When(() => !Connection).Setup((x) => x.FetchSongs(It.IsAny<string>())).Throws(new DatabaseClosedException());
             #endregion
-            Mock<ISoundMaker> ISoundMakerMock = new Mock<ISoundMaker>();
 
+
+            Mock<ISoundMaker> ISoundMakerMock = new Mock<ISoundMaker>();
             #region Setup ISoundMakerMock
             ISoundMakerMock.Setup((x) => x.NowPlaying).Returns(nowPlaying);
             ISoundMakerMock.Setup((x) => x.Play(null)).Throws(new Exception("Null sång"));
@@ -61,15 +64,10 @@ namespace Test_Hemtenta_Christian_Jarenfors
                 ISoundMakerMock.Setup((x) => x.NowPlaying).Returns(nowPlaying);
             });
             #endregion
+
             MP.Setup(IMediaDatabaseMock.Object, ISoundMakerMock.Object);
         }
-        // Antal sånger som finns i spellistan.
-        // Returnerar alltid ett heltal >= 0.
 
-        #region NumSongsInQueue
-
-        public int NumSongsInQueue { get; }
-        #endregion
 
 
         // Söker i databasen efter sångtitlar som

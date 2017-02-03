@@ -43,6 +43,10 @@ namespace HemtentaTdd2017.Webshop
             {
                 throw new Exception("Product is null.");    
             }
+            if (p.Price < 0)
+            {
+                throw new Exception("Negative price not allowed");
+            }
             if (amount<0)
             {
                 throw new Exception("No negative Amount allowed");
@@ -58,6 +62,10 @@ namespace HemtentaTdd2017.Webshop
             if (p == null)
             {
                 throw new Exception("Product is null.");
+            }
+            if (p.Price < 0)
+            {
+                throw new Exception("Negative price not allowed");
             }
             if (amount < 0)
             {
